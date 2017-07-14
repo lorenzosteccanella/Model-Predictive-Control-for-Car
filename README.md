@@ -69,12 +69,7 @@ The kinematic model prediction is used for dealing with the controller delay. In
 
     ψ_t+1=ψ_t+(v_t/L_f)∗δ_t∗dt
 
-    v_t+1=v_t+a_t∗dt
-
-
-
-# CarND-Controls-MPC
-Self-Driving Car Engineer Nanodegree Program
+    v_t+1=v_t+a_t∗d
 
 ---
 
