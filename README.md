@@ -12,31 +12,31 @@ This repository shows up the Model Predictive Control implemented to control a c
 
 The simulator created by Udacity to test our model predictive control alows us to get as input for our MPC the following data:
 
---> ptsx (x global coordinate of N waypoints ahead on the track)
+    --> ptsx (x global coordinate of N waypoints ahead on the track)
 
---> ptsy (y global coordinate of N waypoints ahead on the track)
+    --> ptsy (y global coordinate of N waypoints ahead on the track)
 
---> x ( x global coordinate of position of the car)
+    --> x ( x global coordinate of position of the car)
 
---> y ( y global coordiante of position of the car)
+    --> y ( y global coordiante of position of the car)
 
---> psi ( orientation angle of the car)
+    --> psi ( orientation angle of the car)
 
---> v ( velocity of the car)
+    --> v ( velocity of the car)
 
---> delta ( stearing angle of the car )
+    --> delta ( stearing angle of the car )
 
---> a ( throttle )
+    --> a ( throttle )
 
 In order to predict the state of the vehicle a Global Kinematic Model was used, where:
 
-x_t+1=x_t+v_t∗cos(ψ_t)∗dt
+    x_t+1=x_t+v_t∗cos(ψ_t)∗dt
 
-y_t+1=y_t+v_t∗sin(ψ_t)∗dt
+    y_t+1=y_t+v_t∗sin(ψ_t)∗dt
 
-ψ_t+1=ψ_t+(v_t/L_f)∗δ_t∗dt
+    ψ_t+1=ψ_t+(v_t/L_f)∗δ_t∗dt
 
-v_t+1=v_t+a_t∗dt
+    v_t+1=v_t+a_t∗dt
 
 Kinematic model in comparison to Dynamic models doesn't take in account tire forces, longitudinal and lateral forces, inertia, gravity, air resistance, drag, mass, and the geometry of the vehicle but results enough accurate to allow our vehicle drive around the track.
 
@@ -63,13 +63,13 @@ The cross_track error is calculated using the poly_eval function evaluated in th
 
 The kinematic model prediction is used for dealing with the controller delay. In fact a latency of 100 ms is simulated, using the kinematic model we can make a prediction based on this latency and in this way we can take in account of this delay in our model
 
-x_t+1=x_t+v_t∗cos(ψ_t)∗dt
+    x_t+1=x_t+v_t∗cos(ψ_t)∗dt
 
-y_t+1=y_t+v_t∗sin(ψ_t)∗dt
+    y_t+1=y_t+v_t∗sin(ψ_t)∗dt
 
-ψ_t+1=ψ_t+(v_t/L_f)∗δ_t∗dt
+    ψ_t+1=ψ_t+(v_t/L_f)∗δ_t∗dt
 
-v_t+1=v_t+a_t∗dt
+    v_t+1=v_t+a_t∗dt
 
 
 
