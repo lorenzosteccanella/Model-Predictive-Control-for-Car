@@ -1,0 +1,3 @@
+/home/lorenzo/Udacity/SelfDrivingCar/Term2/CarND-MPC-Project_GIT_LORENZO_STECCANELLA/build/CMakeFiles/edit_cache.dir
+/home/lorenzo/Udacity/SelfDrivingCar/Term2/CarND-MPC-Project_GIT_LORENZO_STECCANELLA/build/CMakeFiles/rebuild_cache.dir
+/home/lorenzo/Udacity/SelfDrivingCar/Term2/CarND-MPC-Project_GIT_LORENZO_STECCANELLA/build/CMakeFiles/mpc.dir
